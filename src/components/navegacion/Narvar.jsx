@@ -9,16 +9,19 @@ const narvar = () => {
     <Link to='/'>
       <img src='./pokemonimg.png' width='50'/>
     </Link>
-    <div className="collapse navbar-collapse" id="navbarNav">
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div>
       <ul className="navbar-nav mx-auto">
         <li className="nav-item">
-          <Link className="nav-link" to="/proyectopoke/src/components/pages/Matricula">Matricula</Link>
+          <Link className="nav-link" to="/Matricula">Matricula</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/proyectopoke/src/components/pages/Pokemon">Pokemon</Link>
+          <Link className="nav-link" to="/Pokemon">Pokemon</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/proyectopoke/src/components/pages/Items">Item</Link>
+          <Link className="nav-link" to="/Items">Item</Link>
         </li>
       </ul>
     </div>

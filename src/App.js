@@ -12,6 +12,11 @@ function App(){
     <div className="App">
      <BrowserRouter>
        <Narvar/>
+       <Routes>
+       <Route path='/' component={Matricula}/>
+       <Route path='/Pokemons' component={Pokemon}/>
+       <Route path='/Items'component={Items}/>
+       </Routes>
      </BrowserRouter>
 
 
