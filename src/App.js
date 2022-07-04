@@ -15,7 +15,7 @@ function App(){
        <Routes>
        <Route path='/Matricula' element={<Matricula/>}/>
        <Route path='/Pokemon' element={<Pokemon/>}/>
-       <Route path='/Items/:items'element={<Items/>}/>
+       <Route path='/Items/:Items'element={<Items/>}/>
        </Routes>
      </BrowserRouter>
 

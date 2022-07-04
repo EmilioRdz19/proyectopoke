@@ -20,9 +20,6 @@ const narvar = () => {
         <li className="nav-item">
           <Link className="nav-link" to="/Pokemon">Pokemon</Link>
         </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/Items">Item</Link>
-        </li>
       </ul>
     </div>
   </div>
