@@ -1,24 +1,11 @@
 import React , {useState,useEffect} from 'react'
+import axios from 'axios'
 
-const UseFetch = (url) => {
-    const [resultado,setResultado]=useState({cargando:true,data:null})
-
-    useEffect( () =>{
-        getDatos(url)
-    },[url])
-
-    async function getDatos(url){
-        try{
-        setResultado({cargando:true,data:null})
-        const resp=await fetch(url)
-        const data= await resp.json()
-        setResultado({cargando:false,data})
-        }
-        catch (e){
-            console.log(e)
-        }
-    }
+export const UseFetch = () => {
+    const resultado = axios.get('https://pokeapi.co/api/v2/pokemon')
   return resultado
     
 }
+
+
 

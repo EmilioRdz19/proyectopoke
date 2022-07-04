@@ -13,9 +13,9 @@ function App(){
      <BrowserRouter>
        <Narvar/>
        <Routes>
-       <Route path='/' component={Matricula}/>
-       <Route path='/Pokemons' component={Pokemon}/>
-       <Route path='/Items'component={Items}/>
+       <Route path='/Matricula' element={<Matricula/>}/>
+       <Route path='/Pokemon' element={<Pokemon/>}/>
+       <Route path='/Items/:items'element={<Items/>}/>
        </Routes>
      </BrowserRouter>
 

@@ -1,15 +1,38 @@
-import React ,{useState} from 'react'
+import React ,{useState , useEffect} from 'react'
 import {UseFetch} from '../UseFetch'
 
-
 const Pokemon = () => {
-    const [url,setUrl]=useState('https://pokeapi.co/api/v2/pokemon')
-    const estado= UseFetch(url)
-    const {cargando,data}=estado
-    cargando? console.log('cargando'):console.log(data.results)
+const [data, setData] = useState([{}])
+useEffect(() => {
+  const obtenerpokemon = async()=> {
+    const resultado =  await UseFetch()
+   console.log(resultado)
+   setData(resultado.data.results)
+   }
+   obtenerpokemon()
+}, []);
 
+const getPokemon = (id) =>{
+console.log(id)
+
+}
   return (
-    <div>pokemon</div>
+    <div>
+
+<ul>
+{data.map((pokemon, index) => {
+  return (
+               <li  key={index}
+                  onClick={() => getPokemon(index + 1)}
+                >
+                  <p>{pokemon.name}</p>
+                </li>
+
+)
+})}
+          </ul>
+
+    </div>
   )
 }
 
